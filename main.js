@@ -1,5 +1,8 @@
 
-var food= angular.module('foodieApp', []);
+var food= angular.module('foodieApp', ['ngRoute']);
+
+food.controller('logincontroller',function($scope){});
+
 food.controller('maincontroller', function ($scope) {
 	$scope.restaurants=$scope.restaurants = [{
 		name: 'Farzi Cafe',
@@ -46,4 +49,56 @@ food.controller('maincontroller', function ($scope) {
 		image: 'http://images.jdmagicbox.com/patiala/r5/9999px175.x175.160920123125.p8r5/catalogue/boston-bites-patiala-ffqae.jpg'
 	}]
 	// body...
-})
+});
+//------------------------------
+
+	food.config(function($routeProvider){
+		$routeProvider
+		.when('/',{
+			templateUrl : 'pages/login.html',
+			controller : 'logincontroller'
+		})
+		.when('/home',{
+			templateUrl : 'pages/main.html',
+			controller : 'maincontroller'
+		})
+	});
+
+//------------------ My js --------------------
+var loc_clicked=0;
+var name;
+
+//------------- return name of list item--------------
+function list_item_name(num){
+	var id="#list_item"+ num;
+	console.log(id);
+	$(id).on('click',function(){
+		loc_clicked=1- loc_clicked;
+		var name1= $(this).attr("name");
+	console.log(name1);
+	name=name1;
+		$('.loc-btn').val( name);
+	});
+	
+}
+
+	for (var i = 1;i < 5; i++) {
+			
+	 list_item_name(i);
+	}
+
+
+
+
+
+
+$('.loc-btn').on('click',function(){
+	loc_clicked=1- loc_clicked;
+	
+	
+	console.log(name);
+	if (loc_clicked==1) {
+		$('.loc-btn').val("");
+	}
+	
+});
