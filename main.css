@@ -8,10 +8,12 @@ body {
     background-color: #F3F3E8;
     font-family: Helvetica, Arial, sans-serif;
 }
+/*https://www.yourdiningapp.com/skin/frontend/ot/restaurant/images/hm_imgs/picjumbo1.jpg*/
 
 .hero {
     background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
     background-size: cover;
+    background-position: center;
     min-height: 300px;
     border-radius: 4px;
     color: white;
@@ -84,7 +86,7 @@ body {
 
 .rest-wrapper .rest-name {
     font-size: 24px;
-    color: #cb202d;
+    color: #cb202d !important ;
 }
 
 .rest-wrapper .rest-category {
@@ -163,4 +165,26 @@ body {
 .btn
 {
     text-align: left;
+}
+p
+{
+    position: relative;
+    top: 55px;
+}
+#app_name {
+    position: relative;
+    width: 116px;
+    height: 120px;
+    background: #cb202d;
+    color: white;
+    font-size: 26px;
+    margin: -45px auto;
+    text-align: center;
+    padding-top: 39px;
+    top: -8px;
+    border-radius: 4px;
+}
+.rest_name
+{
+     color: #cb202d !important ;
 }

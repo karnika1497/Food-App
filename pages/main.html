@@ -1,8 +1,9 @@
 <div class="main " ng-controller="maincontroller">
         
         
-        <div class="ui container">
-            <div class="hero">
+        <div class="ui ">
+            <div class="hero">\
+            	<div id="app_name">jomato</div>
                 <p>Find the best restaurants in town</p>
                 <div class="dropdown search-bar">
                     <ul style="list-style: none; display: inline;">
@@ -40,8 +41,8 @@
                            <small>{{restaurant.category}} </small>
                         </div>
                         <div class="rest-name">
-                        <strong>{{restaurant.name}}</strong>
-                        </div>
+    						<a class="rest_name" ng-href="#!/restaurant/{{restaurant.id}}" ><strong>{{restaurant.name}}</strong></a>
+						</div>
                         <div>
                            <strong> {{restaurant.location}}</strong>
                         </div>
