@@ -5,20 +5,21 @@
             <div class="hero">\
             	<div id="app_name">jomato</div>
                 <p>Find the best restaurants in town</p>
-                <div class="dropdown search-bar">
+                <div class="dropdown search-bar has-feedback-left">
                     <ul style="list-style: none; display: inline;">
                     <li style="display: inline-block; position: relative;top: 4px; left: -40px;"><input class="btn loc-btn dropdown-toggle" type="text" id="menu1" data-toggle="dropdown" value='Chandigarh, India'>
                     <span class="caret"></span>
+                    <i class="fa fa-location-arrow form-control-feedback" aria-hidden="true"></i>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                        <li role="presentation"><a id="list_item1"  name="Chandigarh, India" role="menuitem" tabindex="-1" href="#">All of Chandigarh</a></li>
+                        <li role="presentation"><a id="list_item1"  name="Chandigarh, India" role="menuitem" tabindex="-1">All of Chandigarh</a></li>
                         <li role="presentation" ></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#" style="background:#e7e7e7; color: #777 ; padding: 7px;margin: 5px 0; text-align: center;"> Popular Locations</a></li>
                         <li role="presentation" ></li>
-                        <li role="presentation"><a id="list_item2" name="Sector 17, Chandigarh" role="menuitem" tabindex="-1" href="#">Sector 17, Chandigarh</a></li>
+                        <li role="presentation"><a id="list_item2" name="Sector 17, Chandigarh" role="menuitem" tabindex="-1">Sector 17, Chandigarh</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li role="presentation"><a id="list_item3" name="Sector 35, Chandigarh" role="menuitem" tabindex="-1" href="#">Sector 35, Chandigarh</a></li>
+                        <li role="presentation"><a id="list_item3" name="Sector 35, Chandigarh" role="menuitem" tabindex="-1">Sector 35, Chandigarh</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li role="presentation"><a id="list_item4" name="Sector 22, Chandigarh" role="menuitem" tabindex="-1" href="#">Sector 22, Chandigarh</a></li>
+                        <li role="presentation"><a id="list_item4" name="Sector 22, Chandigarh" role="menuitem" tabindex="-1">Sector 22, Chandigarh</a></li>
                     </ul></li>
                 
                     <li style="display: inline-block; width: 50%" ><form>
@@ -34,7 +35,7 @@
             <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant">
                 <div class="rest-wrapper">
                     <div class="image">
-                        <img src="{{restaurant.image}}" height="100" width="100">
+                        <img ng-src="{{restaurant.image}}" height="100" width="100">
                     </div>
                     <div class="rest-info">
                         <div class="rest-category">

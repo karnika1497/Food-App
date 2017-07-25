@@ -98,14 +98,12 @@ body {
     color: #89959B;
 }
 
-.rest-extra {
+.best-dish {
     display: flex;
-    margin-top: 1rem;
-    border-top: 1px solid #e7e7e7;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
-.rest-extra .type {
+.type {
     text-transform: uppercase;
      color: #89959B;
      flex: none;
@@ -164,7 +162,7 @@ body {
 }
 .btn
 {
-    text-align: left;
+    text-align: center;
 }
 p
 {
@@ -187,4 +185,105 @@ p
 .rest_name
 {
      color: #cb202d !important ;
+}
+/*-------------------------------------------------*/
+.resturant
+{
+    background-color: snow;
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0rem;
+    padding-bottom: 1rem;
+    border-radius: 4px;
+}
+.restwrapper
+{
+    font-family: sans-serif;
+}
+.resta-image img
+{
+    border-radius: 4px;
+    width: 100%;
+    height: 300px;
+}
+.resta-info
+{   
+    padding: 0 2rem;
+    position: relative;
+    top: 10px;
+}
+.resta-name
+{
+    padding: 0.5rem 0; 
+    font-size: 32px;
+    font-weight: 500;
+}
+.ratings
+{
+    color: white;
+    background-color: #5BA829;
+    position: absolute;
+    top: 31.5rem;
+    right: 2rem;
+    padding: 0.45rem 1.5rem;
+    font-size: 22px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+}
+.resta-location
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: #999;
+    position: relative;
+    top: 1.5rem;
+}
+.order
+{
+    position: relative;
+    border-top: 1px solid #e7e7e7;
+    top: 1rem;
+    padding: 2rem 0;
+    margin: 2rem;
+}
+.order-btn
+{
+    background: #099E44;
+    border-radius: 4px;
+    padding: 1rem 2.5rem;
+    font-size: 17px;
+    margin-top: 1rem;
+
+}
+.ingredients-btn
+{
+    background: #099E44;
+    font-size: 15px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+}
+.ingredients-btn: hover
+{
+    background-color: darkgray;
+}
+.dish_img
+{
+    width: 250px;
+    height: 150px;
+    padding: 1rem;
+}
+.fa{
+    font-size: 20px;
+}
+.form-control-feedback {
+    position: absolute;
+    top: 11px;
+    right: 158px;
+    line-height: 34px;
+    text-align: center;
+    color: #999;
 }

@@ -1,24 +1,31 @@
-<div class="restaurant" ng-if="restaurant.name">
-    <div class="rest-wrapper">
-        <div class="image">
-            <img src="{{restaurant.image}}" height="100" width="100">
-        </div>
-        <div class="rest-info">
-            <div class="rest-category">
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="container-fluid" id="wrapper">
+		<div class="row">
+			<div class="col-md-8">
+				<!-- <div id="main"></div> -->
+				<div class="resturant">
+					<div class="restwrapper">
+						<div class="resta-image"><img ng-src="{{restaurant.image}}"></div>
+						<div class="resta-info">
+							<!-- <div class="rest-category">
                <small>{{restaurant.category}} </small>
-            </div>
-            <div class="rest-name">
-            <strong>{{restaurant.name}}</strong>
-            </div>
-            <div>
-               <strong> {{restaurant.location}}</strong>
-            </div>
-            <div class="rest-address">
-                {{restaurant.address}}
-            </div>
-        </div>
-    </div>
-    <div class="rest-extra">
+            </div> -->
+							<div class="resta-name">
+								{{restaurant.name}}
+							</div>
+							<div class="resta-location">
+								{{restaurant.location}}, Chandigarh
+							</div>
+							<!-- <div class="rest-address">
+								{{restaurant.address}}
+							</div> -->
+						</div>
+					</div><!--  <div class="rest-extra">
         <div class="type">
             <div><small>Cuisines:</small></div>
             <div><small>Cost for Two: </small></div>
@@ -29,8 +36,37 @@
             <div>₹{{restaurant.cost | number}}</div>
             <div>{{restaurant.hours}}</div>
         </div>
-    </div>
-    <div class="rating">
-        <strong>{{restaurant.vote}}</strong>
-    </div>
-</div>
+    </div> -->
+    				<div class="order">
+    				<div class="best-dish" ng-if="restaurant.best_dish.name">
+    					<div class="type">
+    						<div><small>Recommended:</small></div>
+    					</div>
+    					<div class="value">
+            				<div>{{restaurant.best_dish.name}}</div>
+        				</div>
+        				<button type="submit" class="ingredients-btn btn-default" ng-click="getIngredients(restaurant.best_dish.image)">Get Ingredients</button>
+    				</div>
+    				<button type="submit" class="order-btn btn-default">Order Food Online</button> 					
+    				</div>
+					<div class="ratings">
+						<strong>{{restaurant.vote}}</strong>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<!-- <div id="sidebar"></div> -->
+				<div ng-if="ingredient" ng-show="flag">
+					<img class="dish_img" ng-src="{{restaurant.best_dish.image}}">
+    				<ol>
+    				<li ng-repeat="ingredient in ingredient">
+    				{{ingredient}}
+    				</li>
+    				</ol>
+				</div>
+				<div style="color: red">{{msg}}</div> 
+			</div>
+		</div>
+	</div>
+</body>
+</html>
