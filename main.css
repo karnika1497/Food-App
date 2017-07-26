@@ -374,3 +374,7 @@ ul
     border-radius: 4px;
     box-shadow: 4px 5px 10px #f44;
 }
+.done_item
+{
+    text-decoration: line-through;
+}

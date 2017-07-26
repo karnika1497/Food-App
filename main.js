@@ -10,7 +10,8 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
             $scope.restaurantId = $routeParams.id;
             var diabetic_ingredients=['sweet','chocolate','brownie','rice','french fries',
                                         'pasta','cookies','chicken','nachos','pie','yogurt',
-                                        'smoothie','mayonnaise','hamburger','cake','pizza']
+                                        'smoothie','mayonnaise','hamburger','cake','pizza'];
+
             var restaurant = [{
                     name: 'Farzi Cafe',
                     address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
@@ -103,6 +104,14 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                     }
             }];//http://img.taste.com.au/ZATA4qbZ/taste/2017/03/double-choc-easter-cheesecake-1980x1320-124941-1.jpg
 
+            $scope.checkedCB = function(){
+                var cb = document.querySelector('#test');
+                if(cb.checked)
+                {
+                    $('.list_names').addClass('done_item');
+                }
+            }
+
             $scope.restaurant = restaurant[$routeParams.id - 1];
             $scope.flag=0;
             $scope.getIngredients = function(url) {
@@ -121,7 +130,8 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                 }).then(function(response) {
                     console.log(response);
                 var ingredients = response.data.outputs[0].data.concepts;
-                $scope.ingredient = [];
+                 $scope.ingredient = [];
+                $scope.grocery_list=[];
                 for (var i = 0; i < ingredients.length; i++) {
                     if(ingredients[i].value>0.75)
                     {
@@ -137,6 +147,13 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                         console.log($scope.msg);
                         break;
                     }
+                }
+                for(k=0;k<$scope.ingredient.length;k++)
+                {
+                    console.log($scope.ingredient[k]);
+                    var x= $('#test').val();
+                     console.log(x);
+                   $scope.grocery_list.push($scope.ingredient[k]);  
                 }
                 console.log(a);
                 // $('.ingredients').html(list);
@@ -251,3 +268,8 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                 }
 
             });
+            // ------------------- GROCERY LIST JS -------------------------------------
+
+           // windows.onload= function(){
+             
+           // } 

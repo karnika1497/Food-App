@@ -44,6 +44,7 @@
             				<div>{{restaurant.best_dish.name}}</div>
         				</div>
         				<button type="submit" class="ingredients-btn btn-default" ng-click="getIngredients(restaurant.best_dish.image)">Get Ingredients</button>
+        				<button type="submit" class="ingredients-btn btn-default" ng-click="getIngredients(restaurant.best_dish.image)">Grocery List</button>
     				</div>
     				<button type="submit" class="order-btn btn-default">Order Food Online</button> 					
     				</div>
@@ -122,6 +123,13 @@
     				</ol>
 				</div>
 				<div ng-if="msg" ng-show="flag" class="warning">{{msg}}</div> 
+				<div ng-if="grocery_list">
+				<ul>
+					<li ng-repeat="grocery_list in grocery_list">
+						<input id="test" type="checkbox" ng-click="checkedCB()"> <span class="list_names">{{grocery_list}}</span> 
+					</li>
+				</ul>
+				</div>
 			</div>
 			</div>
 			
