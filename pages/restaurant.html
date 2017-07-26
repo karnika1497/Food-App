@@ -21,9 +21,7 @@
 							<div class="resta-location">
 								{{restaurant.location}}, Chandigarh
 							</div>
-							<!-- <div class="rest-address">
-								{{restaurant.address}}
-							</div> -->
+							
 						</div>
 					</div><!--  <div class="rest-extra">
         <div class="type">
@@ -52,9 +50,68 @@
 					<div class="ratings">
 						<strong>{{restaurant.vote}}</strong>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
+
+					
+					</div>
+					<div class="container-fluid restaurant_info" id="wrapper">
+						<div class="row">
+							<div class="small_row">
+							<div id="overview_div">OVERVIEW</div>
+							<div class="col-md-4">
+							<div class="type"><small>CUISINE:</small></div>
+							<div>
+								{{restaurant.cuisines}}
+							</div>
+							</div>
+							<div class="col-md-4">
+							<div class="type"><small>ADDRESS:</small></div>
+							<div class="rest-address">
+								{{restaurant.address}}
+							</div> 
+							</div>
+							<div class="col-md-4">
+							<div class="type"><small>OPENING HOURS:</small></div>
+							<div>
+								{{restaurant.hours}}
+							</div>
+							</div>
+							</div>
+
+
+						</div>
+						<div class="row">
+							<div class="small_row">
+							<div id="overview_div">MENU</div>
+							<!-- <div class="col-md-4">
+							<div class="type"><small>CUISINE:</small></div>
+							<div>
+								{{restaurant.cuisines}}
+							</div>
+							</div>
+							<div class="col-md-4">
+							<div class="type"><small>ADDRESS:</small></div>
+							<div class="rest-address">
+								{{restaurant.address}}
+							</div> 
+							</div>
+							<div class="col-md-4">
+							<div class="type"><small>OPENING HOURS:</small></div>
+							<div>
+								{{restaurant.hours}}
+							</div>
+							</div> -->
+							<ul>
+								<li class="menu_list" ng-repeat="menu in restaurant.menu"><img ng-src="{{menu.menu_image}}">
+								<p ng-click="getIngredients(menu.menu_image)">{{menu.menu_name}}</p><p ng-if="msg" class="warning">{{msg}}</p></li>
+							</ul>
+							</div>
+							
+
+						</div>
+						<!-- <div id="menu_div">MENU</div> -->
+					</div>
+					</div>
+					<div class="col-md-4" style="text-align:justify">
 				<!-- <div id="sidebar"></div> -->
 				<div ng-if="ingredient" ng-show="flag">
 					<img class="dish_img" ng-src="{{restaurant.best_dish.image}}">
@@ -64,8 +121,11 @@
     				</li>
     				</ol>
 				</div>
-				<div style="color: red">{{msg}}</div> 
+				<div ng-if="msg" ng-show="flag" class="warning">{{msg}}</div> 
 			</div>
+			</div>
+			
+			
 		</div>
 	</div>
 </body>

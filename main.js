@@ -23,8 +23,38 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                     image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg',
                     best_dish: {
                         name: 'Cheese cake',
-                        image: 'https://www.elementstark.com/woocommerce-extension-demos/wp-content/uploads/sites/2/2016/12/pizza.jpg'
-                    }
+                        image: 'http://www.harvesttotable.com/wp-content/uploads/2007/09/Tomato-soup-with-basil.jpg'//https://www.elementstark.com/woocommerce-extension-demos/wp-content/uploads/sites/2/2016/12/pizza.jpg
+                    },//
+                    menu: [{
+                                menu_image: 'https://cdn2.tmbi.com/TOH/Images/Photos/37/300x300/exps37407_THE1213734_37407_WEB.jpg',
+                                menu_name: 'Cappuccino'
+                            },
+                            {
+                                menu_image: 'http://s.eatthis-cdn.com/media/images/ext/675083154/sweet-iced-tea.jpg',
+                                menu_name: 'Iced Tea'
+                            },
+                            {
+                                menu_image: 'https://www.halfbakedharvest.com/wp-content/uploads/2014/10/Salted-Caramel-Apple-Snickers-Cake.-41.jpg',
+                                menu_name: 'Apple Caramel Cake'
+                            },
+                            {
+                                menu_image: 'http://cdn-image.foodandwine.com/sites/default/files/caribbean-rum-zing-xl-200005.jpg',
+                                menu_name: 'Guava Zing'
+                            },
+                            {
+                                menu_image: 'http://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/5/28/2/TM1A14F_Garlic-Bread_s4x3.jpg.rend.hgtvcom.616.462.suffix/1494390909610.jpeg',
+                                menu_name: 'Garlic Bread'
+                            },
+                            {
+                                menu_image: 'http://alisonsmith.com/wp-content/uploads/2014/05/Sugar-Free-Vegan-Green-Tea-Ice-Cream-6.jpg',
+                                menu_name: 'Vegan Green Tea Ice Cream'
+                            },
+                            {
+                                menu_image: 'http://www.thefitindian.com/wp-content/uploads/2013/04/Moong-Sprouts-Salad.jpg',
+                                menu_name: 'Sprouts'
+                            }
+                            
+                            ]
                 },//http://img.taste.com.au/ZATA4qbZ/taste/2017/03/double-choc-easter-cheesecake-1980x1320-124941-1.jpg
                 {
                     name: 'Girl In The Cafe',
@@ -93,7 +123,7 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                 var ingredients = response.data.outputs[0].data.concepts;
                 $scope.ingredient = [];
                 for (var i = 0; i < ingredients.length; i++) {
-                    if(ingredients[i].value>0.65)
+                    if(ingredients[i].value>0.75)
                     {
                         $scope.ingredient.push(ingredients[i].name);
                     }

@@ -275,6 +275,7 @@ p
     width: 250px;
     height: 150px;
     padding: 1rem;
+    border-radius: 13px;
 }
 .fa{
     font-size: 20px;
@@ -286,4 +287,90 @@ p
     line-height: 34px;
     text-align: center;
     color: #999;
+}
+.restaurant_info {
+    background-color: white;
+    position: relative;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 4px;
+    max-width: 800px;
+}
+#overview_div
+{
+    width: 95%;
+    margin: auto;
+    font-size: 20px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+    color: #777565;
+}
+#menu_div
+{
+    width: 100%;
+    margin: auto;
+    font-size: 20px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+    color: #777565;
+}
+.small-row
+{
+    height: 110px;
+}
+ul
+{
+    list-style: none;
+}
+.menu_list img
+{
+    height: 150px;
+    width: 150px;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 4px;
+}
+
+.menu_list p
+{
+    display: inline-block;
+    position: relative;
+    top: 0;
+    font-size: 22px;
+    text-decoration: underline;
+    color: maroon;
+    text-align: center;
+    width: 200px;
+}
+.menu_list  
+{
+    background: beige;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+.menu_list .warning
+{
+    color: red;
+    font-size: 14px;
+    text-decoration: none;
+    background: snow;
+    padding: 0.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 4px 5px 10px #f44;
+}
+.warning
+{
+    color: red;
+    font-size: 14px;
+    text-decoration: none;
+    background: snow;
+    padding: 0.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 4px 5px 10px #f44;
 }
