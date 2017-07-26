@@ -22,7 +22,7 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                     hours: '12 Noon to 1 AM (Mon-Sun)',
                     image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg',
                     best_dish: {
-                        name: 'Cheese cake',
+                        name: 'Tomato soup',
                         image: 'http://www.harvesttotable.com/wp-content/uploads/2007/09/Tomato-soup-with-basil.jpg'//https://www.elementstark.com/woocommerce-extension-demos/wp-content/uploads/sites/2/2016/12/pizza.jpg
                     },//
                     menu: [{
@@ -67,7 +67,7 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                     hours: '10 AM to 11 PM (Mon-Sun)',
                     image: 'https://miami.eat24hours.com/files/cuisines/v4/cafe.jpg',
                     best_dish: {
-                        name: 'Mousse Cake',
+                        name: 'Hamburger',
                         image: 'http://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/master/pass/the-ultimate-hamburger.jpg'
                     }
                 },//http://img.taste.com.au/nGjAovK2/taste/2016/11/layered-chocolate-mousse-cakes-101268-1.jpeg
@@ -82,7 +82,7 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                     hours: '11:30 AM to 11:30 PM (Mon-Sun)',
                     image: 'https://b.zmtcdn.com/data/pictures/8/121858/a27edf73ecd10761fda62837c87e41de_featured_v2.jpg',
                     best_dish: {
-                        name: 'Burger Pizza',
+                        name: 'Cheese Nachos',
                         image: 'https://www.tostitos.ca/sites/tostitos.ca/files/recipe_hd_ultimate-four-cheese-nachos.jpg'
                     }
                 },//https://lbb.in/bangalore/wp-content/uploads/sites/2/2016/07/190716_BurgerPizzaDominos2.jpg
@@ -98,7 +98,7 @@ food.controller('restaurantcontroller', function($scope, $routeParams, $http) {
                     image: 'http://images.jdmagicbox.com/patiala/r5/9999px175.x175.160920123125.p8r5/catalogue/boston-bites-patiala-ffqae.jpg',
 
                		best_dish: {
-                        name: 'Cheese cake',
+                        name: 'Fruit Juice',
                         image: 'https://qph.ec.quoracdn.net/main-qimg-0d03a3351edd330c887998db004f7609-c'
                     }
             }];//http://img.taste.com.au/ZATA4qbZ/taste/2017/03/double-choc-easter-cheesecake-1980x1320-124941-1.jpg
